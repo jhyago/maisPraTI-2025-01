@@ -1,0 +1,81 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: system-ui, -apple-system,'Open Sans', sans-serif;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  background-color: #7299a8;
+}
+
+div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, .1);
+  padding: 3rem 2rem;
+  width: 350px;
+  background-color: white;
+}
+
+form {
+  width: 100%;
+}
+
+label {
+  font-size: .9rem;
+  margin-bottom: 2px;
+  display: block;
+}
+
+input, 
+select, 
+textarea {
+  padding: 4px 10px;
+  border-radius: 5px;
+  border: 1px solid lightgray;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+  margin-right: 5px;
+}
+
+input[type="checkbox"] {
+  margin-top: 1rem;
+}
+
+input:not([type="radio"]),
+select,
+textarea {
+  margin-bottom: 1rem;
+}
+
+.input-large {
+  width: 100%;
+}
+
+button {
+  background-color: #d77c89;
+  color: white;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 10px;
+  border: none;
+  padding: 10px 25px;
+  display: block;
+  margin: 0 auto;
+  cursor: pointer;
+  transition: .3s;
+}
+
+button:hover {
+  background-color: #ba6572;
+  color: white;
+}
