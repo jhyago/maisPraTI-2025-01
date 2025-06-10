@@ -1,0 +1,80 @@
+body {
+    background-color: #201b2c;
+}
+
+.conteudo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    font-family: 'Noto Sans', sans-serif;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.form {
+    background-color: #2d2841;
+    padding: 24px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 500px;
+    font-size: 100%;
+    text-transform: uppercase;
+}
+
+.titulo {
+    font-family: 'Noto Sans', sans-serif;
+    color: #77ffc0;
+    font-size: 40px;
+    text-align: center;
+    display: block;
+    width: 100%;
+    margin-bottom: -80px;
+}
+
+label {
+    display: block;
+    color: #f0ffffde;
+    margin-top: 4px;
+    margin-bottom: 4px;
+}
+
+.button {
+    width: 100%;
+    padding: 16px 0px;
+    border: none;
+    border-radius: 8px;
+    outline: none;
+    text-transform: uppercase;
+    font-weight: 800;
+    letter-spacing: 3px;
+    color: #2b134b;
+    background-color: #00ff88;
+    cursor: pointer;
+    box-shadow: 0px 10px 40px -12px #00ff8052;
+    margin: 10px 0;
+}
+
+input[type='text'],
+input[type='email'],
+input[type='password'],
+select,
+textarea {
+    width: 100%;
+    padding: 16px 0px;
+    outline: none;
+    text-transform: uppercase;
+    font-weight: 800;
+    letter-spacing: 3px;
+    margin: 10px 0;
+    margin-bottom: 4px;
+    border: 1px solid ccc;
+    border-radius: 4px;
+    font-size: 12px;
+}
+
+::placeholder {
+    padding: 0px 5px;
+}
