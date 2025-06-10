@@ -6,37 +6,120 @@
     <title>Formulários em HTML</title>
 </head>
 <body>
-    <div style="border: 1px solid red">
-        <form>
+    <style>        
+        body {
+            font: 16px Arial, sans-serif;
+            background-color: #7687e4;
+        }
+
+        h1.title {
+            text-align: center;
+            color: #333;
+        }
+        
+        .container {
+            margin: 0 auto;
+            width: 500px;
+            padding: 20px;
+            background-color: #f0f0f0;
+            border-radius: 8px;
+        }
+        
+        .form {
+            padding: 20px;
+            background: #fff;
+            width: 100%;
+            max-width: 400px;
+            border-radius: 4px;
+            margin: auto 20px;
+        }
+
+        .radios {
+            gap: 60px;
+            display: flex;
+            flex-direction: row;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        input {
+            border-radius: 4px;
+            height: 30px;
+            border: 1px solid #757575;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="password"] {
+            font: 14px Arial, sans-serif;
+        }
+
+        input[type="radio"],
+        input[type="checkbox"] {
+            margin: 0 5px 0 0;
+            vertical-align: middle;
+            margin-right: 5px;
+        }
+
+        button.submit {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+
+        button.submit:hover {
+            transition: 500ms;
+            background-color: #45a049;
+        }
+
+        select {
+            border-radius: 4px;
+            height: 30px;
+            border: 1px solid #757575;
+        }
+
+        textarea {
+            border-radius: 4px;
+            border: 1px solid #757575;
+            padding: 5px;
+            font: 14px Arial, sans-serif;
+        }
+
+    </style>
+
+    <div class="container">
+        <h1 class="title">Formulário de Cadastro</h1>
+        <form class="form">
             <label>Nome Completo:</label>
             <input type="text" placeholder="Digite seu nome completo">
-            <br>
+
             <br>
             <label>E-mail:</label>
             <input type="email" placeholder="Digite seu e-mail">
-            <br>
+
             <br>
             <label>Senha:</label>
             <input type="password" placeholder="Digite sua senha">
-            <br>
+
             <br>
             <label>Gênero:</label>
-            <label for="male">
-                <input type="radio" name="gender" value="male">Masculino
-            </label>
-            <label for="female">
-                <input type="radio" name="gender" value="female">Feminino
-            </label>
-             <label for="other">
-                <input type="radio" name="gender" value="other">Outro
-            </label>
+            <div class="radios">
+                <label for="male"><input type="radio" name="gender" value="male">Masculino</label>
+                <label for="female"><input type="radio" name="gender" value="female">Feminino</label>
+                <label for="other"><input type="radio" name="gender" value="other">Outro</label>
+            </div>
             <br>
+
+            <label for="terms"><input type="checkbox" name="terms" required>Aceito os termos de condição.</label>
             <br>
-            <label for="terms">
-                <input type="checkbox" name="terms" required>Aceito os termos de condição.
-            </label>
-            <br>
-            <br>
+
             <label for="city">Cidade:</label>
             <select name="city">
                 <option value="rs">Jaguarão</option>
@@ -46,12 +129,10 @@
                 <option value="mg">Lagoa Santa</option>
             </select>
             <br>
-            <br>
             <label for="message">Mensagem:</label>
             <textarea name="message" rows="4" placeholder="Deixe sua mensagem"></textarea>
-
-            <br><br>
-            <button type="submit">Cadastrar</button>
+            <br>
+            <button type="submit" class="submit">Cadastrar</button>
         </form>
     </div>
 </body>
