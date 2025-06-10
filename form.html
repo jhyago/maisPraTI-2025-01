@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="form.css" />
+    <title>Formulário em HTML</title>
+  </head>
+  <body>
+    <div style="border: 1px solid black">
+      <form action="">
+        <label for="">Nome completo:</label>
+        <input type="text" placeholder="Digite seu nome completo" />
+        <br />
+        <br />
+        <label for="">E-mail:</label>
+        <input type="email" placeholder="Digite seu e-mail" />
+        <br />
+        <br />
+        <label for="">Senha:</label>
+        <input type="password" placeholder="Digite sua senha" />
+        <br />
+        <br />
+        <label for="">Gênero:</label>
+        <label for="male">
+          <input type="radio" name="gender" value="male" />Masculino
+        </label>
+        <label for="female">
+          <input type="radio" name="gender" value="female" />Feminino
+        </label>
+        <label for="other">
+          <input type="radio" name="gender" value="other" />Outro
+        </label>
+        <br />
+        <br />
+
+        <label for="terms">
+          <input type="checkbox" name="terms" id="" required /> Aceito os termos
+          da condição.
+        </label>
+        <br />
+        <br />
+        <label for="city">Cidade</label>
+        <select name="city" id="">
+          <option value="rs">Guaíba</option>
+          <option value="rs">Porto Alegre</option>
+          <option value="mg">Belo Horizonte</option>
+        </select>
+        <br />
+        <br />
+        <label for="message">Mensagem</label>
+        <textarea
+          name="message"
+          rows="4"
+          placeholder="Deixe sua mensagem"
+        ></textarea>
+        <br /><br />
+
+        <button type="submit">Cadastrar</button>
+      </form>
+    </div>
+
+    <div>
+      <h1>O Grêmio é o maior!</h1>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,18 @@
+label {
+  color: blue;
+  font-weight: bold;
+  background-color: antiquewhite;
+}
+
+input {
+  color: black;
+  font-weight: bold;
+}
+
+body {
+  background-color: blue;
+}
+
+form {
+  background-color: black;
+}
