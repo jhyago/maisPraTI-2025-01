@@ -1,12 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formulários em HTML</title>
 </head>
+<header>
+    <h1>
+        Formulario:
+    </h1>
+</header>
+
 <body>
-    <div style="border: 1px solid red">
+    <div>
+
         <form>
             <label>Nome Completo:</label>
             <input type="text" placeholder="Digite seu nome completo">
@@ -27,7 +35,7 @@
             <label for="female">
                 <input type="radio" name="gender" value="female">Feminino
             </label>
-             <label for="other">
+            <label for="other">
                 <input type="radio" name="gender" value="other">Outro
             </label>
             <br>
@@ -54,5 +62,64 @@
             <button type="submit">Cadastrar</button>
         </form>
     </div>
+    <style>
+        body {
+            background-color: #f8f8f8;
+            font-family: Arial, sans-serif;
+        }
+
+        header {
+            display: flex;
+            justify-content: center;
+            background-color: rgb(147, 77, 77);
+            color: aliceblue;
+            width: 900px;
+            padding: 15px;
+            margin: 10px auto;
+        }
+
+
+        div {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 900px;
+            padding: 15px;
+            margin: 10px auto;
+            background-color: rgba(240, 166, 166, 0.454);
+        }
+
+
+        select,
+        textarea {
+            padding: 5px;
+            background-color: rgb(255, 254, 254);
+            width: 100%;
+            max-width: 400px;
+            margin-top: 5px;
+        }
+
+        label {
+            font-weight: bold;
+            align-self: center;
+        }
+
+        button:hover {
+
+            background-color: rgba(240, 166, 166, 0.454);
+        }
+
+        input:focus,
+        select:focus,
+        textarea:focus {
+            border: 2px solid #9e200a9e;
+
+            outline: none;
+
+            background-color: #fef6ff;
+
+        }
+    </style>
 </body>
+
 </html>
