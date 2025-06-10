@@ -1,0 +1,62 @@
+body {
+    border: none;
+    padding: 0;
+    margin: 0;
+}
+
+.form-container {
+    background-image: url("./assets/background.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.form-container > form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background-color: rgba(246, 229, 253, 0.603);
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    border-radius: 20px;
+    width: 400px;
+}
+
+.form-container > form > input {
+    height: 30px;
+    border-radius: 5px;
+    border: none;
+    padding: 5px;
+}
+
+.form-container > form label {
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.form-container > form select {
+    height: 30px;
+    border: none;
+}
+
+.form-container > form textarea {
+    height: 200px;
+    border: none;
+    border-radius: 10px;
+    padding: 5px;
+}
+
+.form-container > form button {
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+    background-color: rgb(66, 1, 128);
+    color: aliceblue;
+    font-weight: bold;
+}
