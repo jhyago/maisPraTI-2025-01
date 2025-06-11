@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulários em HTML</title>
+</head>
+<body>
+    <div style="border: 1px solid red">
+        <form>
+            <label>Nome Completo:</label>
+            <input type="text" placeholder="Digite seu nome completo">
+            <br>
+            <br>
+            <label>E-mail:</label>
+            <input type="email" placeholder="Digite seu e-mail">
+            <br>
+            <br>
+            <label>Senha:</label>
+            <input type="password" placeholder="Digite sua senha">
+            <br>
+            <br>
+            <label>Gênero:</label>
+            <label for="male">
+                <input type="radio" name="gender" value="male">Masculino
+            </label>
+            <label for="female">
+                <input type="radio" name="gender" value="female">Feminino
+            </label>
+             <label for="other">
+                <input type="radio" name="gender" value="other">Outro
+            </label>
+            <br>
+            <br>
+            <label for="terms">
+                <input type="checkbox" name="terms" required>Aceito os termos de condição.
+            </label>
+            <br>
+            <br>
+            <label for="city">Cidade:</label>
+            <select name="city">
+                <option value="rs">Jaguarão</option>
+                <option value="rs">Esteio</option>
+                <option value="rs">Campo Bom</option>
+                <option value="mg">Belo Horizonte</option>
+                <option value="mg">Lagoa Santa</option>
+            </select>
+            <br>
+            <br>
+            <label for="message">Mensagem:</label>
+            <textarea name="message" rows="4" placeholder="Deixe sua mensagem"></textarea>
+
+            <br><br>
+            <button type="submit">Cadastrar</button>
+        </form>
+    </div>
+</body>
+</html>
