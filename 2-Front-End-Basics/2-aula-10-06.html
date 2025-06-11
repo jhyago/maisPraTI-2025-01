@@ -4,20 +4,82 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formulários em HTML</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        span {
+            color: red;
+        }
+
+        #form-container {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        h2 {
+            text-align: center;
+            color: #333;
+            font-size: 24px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            color: #555;
+        }
+
+        input[type="text"], input[type="email"], input[type="password"], select, textarea {
+            width: 90%;
+            padding: 10px;
+            margin-bottom: 12px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+
+        input[type="radio"], input[type="checkbox"] {
+            margin-right: 8px;
+        }
+
+        button {
+            background-color: #4caf50;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 4px;
+            font-size: 16px;
+            cursor: pointer;
+            width: 100%;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
 </head>
 <body>
-    <div style="border: 1px solid red">
+    <div>
+        <h2>Cadastrar Usuário</h2>
         <form>
-            <label>Nome Completo:</label>
-            <input type="text" placeholder="Digite seu nome completo">
-            <br>
-            <br>
-            <label>E-mail:</label>
-            <input type="email" placeholder="Digite seu e-mail">
-            <br>
-            <br>
-            <label>Senha:</label>
-            <input type="password" placeholder="Digite sua senha">
+            <label for="full-name">Nome Completo:<span>*</span></label>
+            <input type="text" placeholder="Digite seu nome completo" id="full-name" required>
+            <label for="email">E-mail:<span>*</span></label>
+            <input type="email" placeholder="Digite seu e-mail" id="email" required>
+
+            <label for="password">Senha:<span>*</span></label>
+            <input type="password" placeholder="Digite sua senha" id="password" required>
             <br>
             <br>
             <label>Gênero:</label>
@@ -30,13 +92,11 @@
              <label for="other">
                 <input type="radio" name="gender" value="other">Outro
             </label>
-            <br>
-            <br>
+
             <label for="terms">
-                <input type="checkbox" name="terms" required>Aceito os termos de condição.
+                <input type="checkbox" name="terms" required>Aceito os <a href="#">termos de condição.</a><span>*</span>
             </label>
-            <br>
-            <br>
+
             <label for="city">Cidade:</label>
             <select name="city">
                 <option value="rs">Jaguarão</option>
@@ -45,12 +105,10 @@
                 <option value="mg">Belo Horizonte</option>
                 <option value="mg">Lagoa Santa</option>
             </select>
-            <br>
-            <br>
+     
             <label for="message">Mensagem:</label>
             <textarea name="message" rows="4" placeholder="Deixe sua mensagem"></textarea>
 
-            <br><br>
             <button type="submit">Cadastrar</button>
         </form>
     </div>
