@@ -1,0 +1,64 @@
+h1 {
+    color: blue;
+    font-size: 32px;
+}
+
+p {
+    color: gray;
+    line-height: 1.5;
+}
+
+.destaque {
+    background-color: yellow;
+    font-weight: bold;
+}
+
+#cabecalho {
+    background-color: black;
+    color: white;
+    padding: 10px;
+}
+
+ul li {
+  font-family: arial;  
+}
+
+ul li.importante {
+    color: red;
+}
+
+a:hover {
+    text-decoration: none;
+    color: green;
+}
+
+h1, h2, h3 {
+    text-align: center;
+    color: navy;
+}
+
+body {
+    background-color: #f0f0f0;
+    margin: 0;
+}
+
+/* Inline: 1000
+seletor de Id: 100
+seletor de classe ou pseudo classe: 10
+seletor de tipo: 1 */
+
+p {
+    color: blueviolet !important;
+}
+
+p.texto {
+    color: bisque;
+}
+/* 
+.texto {
+    color: aquamarine;
+}
+
+#principal {
+    color: black;
+} */
