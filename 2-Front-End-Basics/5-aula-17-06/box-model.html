@@ -66,3 +66,62 @@ O botão "Comprar" deve ficar colado ao fundo do card com padding interno, mas c
 
 O card não pode ultrapassar os 200px de largura total, mesmo com padding e borda.
 -->
+
+
+  <div class="card-produto">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQHk..." alt="Produto">
+    <h2>NOTEBOOK PEQUENO</h2>
+    <p class="preco">R$ 99,99</p>
+    <button class="comprar">Comprar</button>
+  </div>
+
+<style div class="card-produto"> 
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f5f5f5;
+}
+
+.card-produto {
+  box-sizing: border-box; 
+  width: 200px;
+  padding: 20px;
+  border: 2px solid #333;
+  text-align: center;
+  background-color: #fff;
+}
+
+.card-produto img {
+  width: 100%;
+  height: auto;
+}
+
+.card-produto h2 {
+  font-size: 18px;
+  margin: 10px 0;
+}
+
+.card-produto .preco {
+  font-size: 16px;
+  color: #333;
+  margin: 10px 0;
+}
+
+.card-produto .comprar {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  margin-top: 20px; /* margem externa para afastar de outros elementos abaixo */
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+.card-produto .comprar:hover {
+  background-color: #0056b3;
+}
+ 
+</style>
