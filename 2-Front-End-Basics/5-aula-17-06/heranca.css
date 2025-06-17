@@ -1,0 +1,31 @@
+body {
+    background-color: #ccc;
+}
+
+.pai {
+    color: green;
+    font-family: arial;
+    border: 1px solid red;
+    margin: 10px;
+}
+
+p {
+    border: inherit;
+    margin: inherit;
+}
+
+article p {
+    color: blue;
+}
+
+article > a {
+    color: green
+}
+/* Irmão adjancete - Imediatamente próximo */
+h1 + p { 
+    color: red;
+}
+
+h1 ~ p {
+    color: red;
+}
