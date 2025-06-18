@@ -1,0 +1,197 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+}
+
+table {
+    border: 1px solid;
+}
+
+th,
+td {
+    border: 1px solid;
+    background-color: bisque;
+}
+
+.container {
+    width: 100%;
+    height: 100%;
+    background-color: gray;
+}
+
+.container .cabecalho {
+    width: 100%;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    gap: 25%;
+}
+
+.container .cabecalho .menu {
+    display: flex;
+    gap: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.container .cabecalho .menu a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.container .cabecalho .perfil {
+    color: aquamarine;
+}
+
+.container .principal {
+    width: 100%;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container .principal #um {
+    color: black;
+}
+
+.container .principal #dois {
+    color: yellow;
+}
+
+.container .principal #tres {
+    color: red;
+}
+
+.container .destaque {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container .destaque .menu {
+    display: flex;
+
+}
+
+.cadastro {
+    width: 100%;
+    height: 1200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cadastro .form-container {
+    width: 100%;
+    max-width: 600px;
+    padding: 40px;
+    border-radius: 12px;
+    background-color: #ffffff;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+
+}
+
+.cadastro .form-container .form-header {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.cadastro .form-container h1 {
+    color: cadetblue;
+    margin: 0;
+    font-size: 40px;
+}
+
+.cadastro .form-container p {
+    margin-bottom: 40px;
+    margin-top: 10px;
+    font-size: 15px;
+    font-weight: bold;
+    color: gray;
+}
+
+#cadastroForm {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+#cadastroForm .form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+#cadastroForm .form-group label {
+    font-weight: bold;
+    color: rgb(10, 2, 112);
+    font-size: 13px;
+    padding-bottom: 5px;
+}
+
+#cadastroForm .form-group input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+#cadastroForm .form-group input:focus {
+    outline: none;
+    border-color: #011094;
+    box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.2);
+}
+
+#cadastroForm .form-row {
+    display: flex;
+    gap: 20px;
+}
+
+#cadastroForm .form-row .form-group {
+    flex: 1;
+    /* essa propriedade faz com que os campos sejam distribuidos de forma igual */
+}
+
+.cadastro .submit-btn {
+    color: white;
+    background-color: cadetblue;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-bottom: 20px;
+    font-size: 18px;
+}
+
+.cadastro .submit-btn:hover {
+    background-color: #011094;
+}
+/* ao passar em cima */
+
+.cadastro .submit-btn:active {
+    background-color: #d8810f;
+    box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.2);
+}
+/* ao clicar */
+
+.cadastro .form-footer{
+    text-align: center;
+    font-size: 14px;
+    color: gray;
+    text-decoration: none;
+}
+
+.cadastro .form-footer a {
+    text-align: center;
+    font-size: 14px;
+    color: cadetblue;
+    text-decoration: none;
+}

@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <!-- conjunto de caracteres padrão -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- para o dispositivo ser responsivo -->
+    <meta name="keywords" content="Desenvolvimento Web, HTML, CSS e Javascript">
+    <!-- palavras chave do site -->
+    <meta name="Author" content="Dick Vigarista">
+    <!-- autor do site -->
+    <meta name="description" content="Esse é um site de cunho educativo.">
+    <!-- descricao do site -->
+    <title>Aula 01</title>
+
+    <link rel="stylesheet" href="1-Basic-Style.css">
+</head>
+
+<body>
+    <main class="container">
+        <!-- Cabeçalho do site utilizando html semantico -->
+        <header class="cabecalho">
+            <nav class="menu">
+                <a href="home.html">Home</a>
+                <a href="contato.html">Contato</a>
+            </nav>
+            <div class="perfil">
+                <h1>Aprendendo HTML na Prática</h1>
+            </div>
+        </header>
+
+        <hr>
+
+        <section class="principal">
+            <p id="um">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam quaerat neque id voluptatum unde
+                accusantium laborum, quod debitis aspernatur. Explicabo ratione cumque nam eius? Facilis sunt harum
+                minima modi officia.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam quaerat neque id voluptatum unde
+                accusantium laborum, quod debitis aspernatur. Explicabo ratione cumque nam eius? Facilis sunt harum
+                minima modi officia.
+            </p>
+            <p id="dois">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam quaerat neque id voluptatum unde
+                accusantium laborum, quod debitis aspernatur. Explicabo ratione cumque nam eius? Facilis sunt harum
+                minima modi officia.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam quaerat neque id voluptatum unde
+                accusantium laborum, quod debitis aspernatur. Explicabo ratione cumque nam eius? Facilis sunt harum
+                minima modi officia.
+            </p>
+            <p id="tres">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam quaerat neque id voluptatum unde
+                accusantium laborum, quod debitis aspernatur. Explicabo ratione cumque nam eius? Facilis sunt harum
+                minima modi officia.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam quaerat neque id voluptatum unde
+                accusantium laborum, quod debitis aspernatur. Explicabo ratione cumque nam eius? Facilis sunt harum
+                minima modi officia.
+            </p>
+        </section>
+
+        <hr>
+
+        <section class="destaque">
+            <div class="menu">
+                <!-- tag abbr para abreviaturas e siglas para acessibilidade -->
+                <p>Veja a Sigla <abbr title="Sistema Único de Saúde">SUS</abbr></p>
+                <!-- tag blockquote para citacoes -->
+                <blockquote cite="https://developer.mozilla.org">
+                    A Web é Construída sobre os padrões abertos e grande colaboração da comunidade.
+                </blockquote>
+                <p>5 de Novembro é uma data popularizada por <cite>Guy Fawkes</cite></p>
+                <p>Como disse Carlos Gonzada: <q>O Amor é uma Dor.</q></p>
+                <p>O Grêmio vai levar a <strong>Sul-Americana</strong> esse ano.</p>
+                <p>Geralt de Rívia é um grande <em>bruxo.</em></p>
+                <p>Killua é mais forte que o <u>Gon</u></p>
+                <p>A cidade de Porto Alegre tem dois times Grêmio e <s>Inter</s> São José</p>
+            </div>
+        </section>
+
+        <hr>
+
+        <section id="catalogo">
+            <div class="cat">
+                <h2 style="color: blue" id="catalogo titulo">Catálogo de Produtos</h2>
+                <table>
+                    <tr>
+                        <th>Produto</th>
+                        <th>Descrição</th>
+                        <th>Preço</th>
+                    </tr>
+                    <tr>
+                        <td>Smartphone</td>
+                        <td>Modelo com tela AMOLED de 5"</td>
+                        <td>R$ 100</td>
+                    </tr>
+                    <tr>
+                        <td>Câmera DSLR</td>
+                        <td>24MP com lente de 18-55mm</td>
+                        <td>R$ 120</td>
+                    </tr>
+                    <tr>
+                        <td>Playstation 5</td>
+                        <td>Console que não tem jogo.</td>
+                        <td>R$ 220</td>
+                    </tr>
+                    <tr>
+                        <td colspan="3">Total: R$ 440</td>
+                    </tr>
+                </table>
+            </div>
+        </section>
+
+        <hr>
+
+        <section class="cadastro">
+            <div class="form-container">
+                <div class="form-header">
+                    <h1>Formulário de Cadastro</h1>
+                    <p>Preencha todos os campos abaixo</p>
+                </div>
+
+                <form id="cadastroForm">
+                    <div class="form-group">
+                        <label for="nomeCompleto">Nome Completo</label>
+                        <input type="text" id="nomeCompleto" name="nomeCompleto" placeholder="Digite seu nome completo">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">E-mail</label>
+                        <input type="email" id="email" name="email" placeholder="Digite seu e-mail">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="senha">Senha</label>
+                        <input type="password" id="senha" name="senha" placeholder="Digite sua senha">
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="telefone">Telefone</label>
+                            <input type="tel" id="telefone" name="telefone" placeholder="(11) 99999-9999">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="dataNascimento">Data de Nascimento</label>
+                            <input type="date" id="dataNascimento" name="dataNascimento">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="endereco">Endereço</label>
+                        <input type="text" id="endereco" name="endereco" placeholder="Digite seu endereço completo">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="cidade">Cidade</label>
+                        <input type="text" id="cidade" name="cidade" placeholder="Digite sua cidade">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="cep">CEP</label>
+                        <input type="text" id="cep" name="cep" placeholder="00000-000">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="profissao">Profissão</label>
+                        <input type="text" id="profissao" name="profissao" placeholder="Digite sua profissão">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="empresa">Empresa</label>
+                        <input type="text" id="empresa" name="empresa" placeholder="Digite o nome da empresa">
+                    </div>
+
+                    <button type="submit" class="submit-btn">
+                        Criar Conta
+                    </button>
+                </form>
+
+                <div class="form-footer">
+                    Já tem uma conta? <a href="#">Fazer login</a>
+                </div>
+            </div>
+        </section>
+
+        <hr>
+
+        <footer>
+            <h2>Rodapé</h2>
+            &lt;Desenvolvendo para Web&gt;
+            <p>Desenvolvido por Jaques &copy; 2025</p>
+        </footer>
+    </main>
+
+</body>
+
+</html>
