@@ -1,190 +1,310 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Aula 10 de Junho - Formulários</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
 
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #e9f4f9;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      :root {
+        --primary-color: hsl(83, 88%, 40%);
+        --secondary-color: hsl(200, 100%, 10%);
+        --text-color: hsl(289, 19%, 18%);
+        --bg-color: hsl(10, 50%, 95%);
+        --bg-container-color: hsl(0, 0%, 83%, 0.4);
+        --border-color: hsl(0, 0%, 70%);
+        --box-shadow: hsl(0, 0%, 25%);
+        --hover-color: hsl(90, 100%, 30%);
+      }
+
+      body {
+        font-family: "Inter", Arial, Helvetica, sans-serif;
+        color: var(--text-color);
+        background-color: var(--bg-color);
+        display: flex;
+        justify-content: center;
+        padding: 20px 0 20px 0;
+      }
+
+      #form-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background-color: var(--bg-container-color);
+        max-width: 80%;
+        padding: 1rem;
+        box-shadow: 4px 4px var(--box-shadow);
+        gap: 1rem;
+      }
+
+      form {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+        font-size: 0.85rem;
+        font-weight: 400;
+      }
+
+      label {
+        padding-bottom: 0.5rem;
+        font-weight: 500;
+      }
+      .input-group {
+        display: flex;
+        flex-direction: column;
+      }
+
+      input {
+        font-size: 0.75rem;
+        padding: 4px;
+      }
+
+      input[type="text"],
+      input[type="email"],
+      input[type="password"],
+      input[type="tel"],
+      input[type="url"],
+      input[type="date"],
+      input[type="time"],
+      input[type="search"],
+      input[type="number"],
+      input[type="city"],
+      input[type="message"] {
+        border-bottom: 2px solid;
+        border-color: var(--border-color);
+        background-color: #ffffff;
+
+        focus {
+          outline: none;
+          border-color: var(--primary-color);
+        }
+        &:focus {
+          outline: none;
+          border-color: var(--primary-color);
+        }
+      }
+
+      file {
+        font-size: 0.75rem;
+        padding: 4px;
+        border: 2px solid;
+        border-color: var(--border-color);
+        background-color: #ffffff;
+
+        &:focus {
+          outline: none;
+          border-color: var(--primary-color);
+        }
+      }
+
+      .radio-group,
+      .checkbox-group {
+        display: flex;
+        flex-direction: row;
+        gap: 1rem;
+        align-items: center;
+      }
+
+      .radio-group input,
+      .checkbox-group input {
+        margin-right: 0.5rem;
+        accent-color: var(--primary-color);
+        cursor: pointer;
+      }
+      .radio-group label,
+      .checkbox-group label {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+      }
+
+      select {
+        font-size: 0.75rem;
+        padding: 4px;
+        border: 2px solid;
+        border-color: var(--border-color);
+        background-color: #ffffff;
+        color: var(--primary-color);
+
+        &:focus {
+          outline: none;
+          border-color: var(--primary-color);
+        }
+      }
+
+      ::file-selector-button {
+        font-size: 0.75rem;
+        color: var(--text-color);
+        padding: 5px 10px;
+        border-radius: 5px;
+        border: 2px solid var(--border-color);
+        background-color: var(--primary-color);
+        box-shadow: 3px 3px var(--box-shadow);
+        cursor: pointer;
+      }
+
+      textarea {
+        font-size: 0.75rem;
+        padding: 4px;
+        border: 2px solid;
+        border-color: var(--border-color);
+        background-color: #ffffff;
+        resize: vertical;
+        min-height: 100px;
+
+        &:focus {
+          outline: none;
+          border-color: var(--primary-color);
+        }
+      }
+
+      button {
+        color: var(--text-color);
+        font-weight: 600;
+        padding: 4px;
+        background-color: var(--primary-color);
+        box-shadow: 3px 3px var(--box-shadow);
+
+        &:hover {
+          background-color: var(--hover-color);
+          color: var(--text-color);
         }
 
-        #form-container {
-            background-color: white;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            padding: 40px;
+        &:focus {
+          color: var(--text-color);
+          background-color: var(--hover-color);
+          box-shadow: 1px 1px var(--box-shadow);
         }
-
-        h2 {
-            text-align: center;
-            font-size: 20px;
-            color: #444;
-            margin-bottom: 20px;
-        }
-
-        label {
-            display: block;
-            font-size: 16px;
-            margin-bottom: 8px;
-            color: #555;
-        }
-
-        input {
-            padding: 10px;
-            font-size: 16px;
-            margin-bottom: 15px;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-        }
-
-        .input-group {
-            margin-bottom: 15px;
-        }
-
-        .input-group label {
-            margin-bottom: 5px;
-        }
-
-        .input-group .radio-group, .input.group .checkbox-group {
-            display: flex;
-            gap: 20px;
-        }
-
-        button {
-            background-color: #4caf50;
-            color: white;
-            cursor: pointer;
-            border: none;
-            font-size: 18px;
-            padding: 10px;
-        }
-
-        button:hover {
-            background-color: #45a049;
-        }
-
-        input, select, textarea, button {
-            padding: 10px;
-            font-size: 16px;
-            margin-bottom: 15px;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-        }
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
     <div id="form-container">
-        <h2>Formulário de Cadastro</h2>
-        <form>
-            <div class="input-group">
-                <label>Nome Completo:</label>
-                <input type="text">
-            </div>
-            
-            <div class="input-group">
-                <label>E-mail:</label>
-                <input type="email">
-            </div>
-            
-            <div class="input-group">
-                <label>Senha:</label>
-                <input type="password" placeholder="Digite sua senha">
-            </div>
-            
-            <div class="input-group">
-                <label>Telefone:</label>
-                <input type="tel" placeholder="Digite seu Telefone">
-            </div>
-        
-            <div class="input-group">
-                <label>Website:</label>
-                <input type="url">
-            </div>
-            
-            <div class="input-group">
-                <label>Data de Nascimento:</label>
-                <input type="date">
-            </div>
-            
-            <div class="input-group">
-                <label>Hora:</label>
-                <input type="time">
-            </div>
-            
-            <div class="input-group">
-                <label>Pesquisa:</label>
-                <input type="search">
-            </div>
-           
-            <div class="input-group">
-                <label>Quantidade:</label>
-                <input type="number">
-            </div>
+      <h2>Formulário de Cadastro</h2>
+      <form>
+        <div class="input-group">
+          <label>Nome Completo*:</label>
+          <input type="text" placeholder="Digite seu nome completo" required />
+        </div>
 
-            <div class="input-group">
-                <label>Gênero:</label>
-                <div class="radio-group">
-                    <label for="male">
-                        <input type="radio" value="male" name="gender">Masculino
-                    </label>
-                    <label for="female">
-                        <input type="radio" value="female" name="gender">Feminino
-                    </label>
-                    <label for="other">
-                        <input type="radio" value="other" name="gender">Outro
-                    </label>
-                </div>
-            </div>
+        <div class="input-group">
+          <label>E-mail*:</label>
+          <input type="email" placeholder="Digite seu e-mail" required />
+        </div>
 
-            <div class="input-group">
-                <label>Preferências:</label>
-                <div class="checkbox-group">
-                    <label for="newsletter">
-                        <input type="checkbox" name="newsletter">Gostaria de assinar a newsletter
-                    </label>
-                    <label for="updates">
-                        <input type="checkbox" name="updates">Gostaria de receber atualizações
-                    </label>
-                </div>
-            </div>
+        <div class="input-group">
+          <label>Senha*:</label>
+          <input type="password" placeholder="Digite sua senha" required />
+        </div>
 
-            <div class="input-group">
-                <label for="resume">Carregar Currículo:</label>
-                <input type="file" name="resume">
-            </div>
+        <div class="input-group">
+          <label>Telefone*:</label>
+          <input type="tel" placeholder="Digite seu Telefone" required />
+        </div>
 
-            <div class="input-group">
-                <label for="city">Cidade:</label>
-                <select name="city">
-                    <option value="rs">Jaguarão</option>
-                    <option value="sp">Sorocaba</option>
-                    <option value="rj">Rio de Janeiro</option>
-                    <option value="rs">Tapes</option>
-                    <option value="pe">Olinda</option>
-                    <option value="rs">Parobé</option>
-                    <option value="rs">Bagé</option>
-                    <option value="pb">João Pessoa</option>
-                    <option value="ba">Salvador</option>
-                    <option value="ba">Xique-Xique</option>
-                </select>
-            </div>
+        <div class="input-group">
+          <label>Website:</label>
+          <input type="url" placeholder="Digite a URL do seu website" />
+        </div>
 
-            <div class="input-group">
-                <label for="message">Mensagem</label>
-                <textarea name="message" placeholder="Deixe sua mensagem"></textarea>
-            </div>
+        <div class="input-group">
+          <label>Data de Nascimento*:</label>
+          <input type="date" required />
+        </div>
 
-            <button type="submit">Enviar</button>
-        </form>
-    </div>  
-</body>
+        <div class="input-group">
+          <label>Hora*:</label>
+          <input type="time" required />
+        </div>
+
+        <div class="input-group">
+          <label>Pesquisa:</label>
+          <input type="search" placeholder="Digite sua pesquisa" />
+        </div>
+
+        <div class="input-group">
+          <label>Quantidade*:</label>
+          <input type="number" placeholder="Digite a quantidade" required />
+        </div>
+
+        <div class="input-group">
+          <label>Gênero:</label>
+          <div class="radio-group">
+            <label for="male">
+              <input type="radio" value="male" name="gender" />Masculino
+              <span class="checkmark"></span>
+            </label>
+            <label for="female">
+              <input type="radio" value="female" name="gender" />Feminino
+            </label>
+            <label for="other">
+              <input type="radio" value="other" name="gender" />Outro
+            </label>
+          </div>
+        </div>
+
+        <div class="input-group">
+          <label>Preferências:</label>
+          <div class="checkbox-group">
+            <label for="newsletter">
+              <input type="checkbox" name="newsletter" />Gostaria de assinar a
+              newsletter
+            </label>
+            <label for="updates">
+              <input type="checkbox" name="updates" />Gostaria de receber
+              atualizações
+            </label>
+          </div>
+        </div>
+
+        <div class="input-group">
+          <label for="resume">Carregar Currículo:</label>
+          <button
+            onclick="document.getElementById('getFile').click();"
+            type="file"
+            name="resume"
+            placeholder="Selecione seu currículo"
+          >
+            Carregar pdf
+          </button>
+          <input id="getFile" type="file" placeholder="Selecione seu currículo" style="display: none;" />
+        </div>
+
+        <div class="input-group">
+          <label for="city">Cidade:</label>
+          <select name="city">
+            <option value="rs">Jaguarão</option>
+            <option value="sp">Sorocaba</option>
+            <option value="rj">Rio de Janeiro</option>
+            <option value="rs">Tapes</option>
+            <option value="pe">Olinda</option>
+            <option value="rs">Parobé</option>
+            <option value="rs">Bagé</option>
+            <option value="pb">João Pessoa</option>
+            <option value="ba">Salvador</option>
+            <option value="ba">Xique-Xique</option>
+          </select>
+        </div>
+
+        <div class="input-group">
+          <label for="message">Mensagem</label>
+          <textarea name="message" placeholder="Deixe sua mensagem"></textarea>
+        </div>
+
+        <button type="submit">Enviar</button>
+      </form>
+    </div>
+  </body>
 </html>
