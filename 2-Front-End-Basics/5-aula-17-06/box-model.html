@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Box Model</title>
+    <style>
+
+        body {
+            font-size: 12px;
+        }
+
+        div {
+            border: 1px solid red;
+            font-size: 20px;
+        }
+
+        h2.content {
+            border: inherit;
+            width: 100px;
+            height: 100px;
+            padding: 10px;
+            box-sizing: border-box;
+            margin-left: 100px;
+            
+        }
+
+        h2.units {
+            border: inherit;
+            height: 100vmin;
+            width: 100vmin;
+            font-size: 2rem
+        }
+
+        /* largura total = largura + (padding * 2) + (border * 2) = 122px*/ 
+    </style>
+</head>
+<body>
+    <div>
+        <h2 class="content">content</h2>
+    </div>
+
+    <div>
+        <h2 class="units">unidades de medida</h2>
+    </div>
+</body>
+</html>
+
+<!-- Você está desenvolvendo uma loja virtual e precisa criar um card de produto que contenha:
+
+    Uma imagem do produto
+
+    O nome do produto
+
+    O preço
+
+    Um botão "Comprar"
+
+Requisitos de estilo:
+
+O card deve ter 200px de largura, com espaço interno (padding) de 20px para que o conteúdo não fique colado nas bordas.
+
+Deve haver uma borda sólida de 2px ao redor do card.
+
+O botão "Comprar" deve ficar colado ao fundo do card com padding interno, mas com uma margem externa que o afaste de outros elementos abaixo.
+
+O card não pode ultrapassar os 200px de largura total, mesmo com padding e borda.
+-->
