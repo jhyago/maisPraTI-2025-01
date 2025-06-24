@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid</title>
+    <style>
+        .container {
+            display: grid;
+            grid-template-areas:none
+            "header header header"
+            "aside content content"
+            "footer footer footer";
+            grid-template-columns: 1fr 2fr 2fr;
+            gap: 10px;
+            border: 1px solid black;
+        }
+
+        .header {
+            border: inherit;
+            grid-area: header;
+        }
+
+        .aside {
+            border: inherit;
+            grid-area: aside;
+        }
+
+        .content {
+            border: inherit;
+            grid-area: content;
+        }
+
+        .footer {
+            border: inherit;
+            grid-area: footer;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header class="header">Cabeçalho</header>
+        <aside class="aside">Menu Lateral</aside>
+        <main class="content">Conteúdo Principal</main>
+        <footer class="footer">Rodapé</footer>
+    </div>
+</body>
+</html>
