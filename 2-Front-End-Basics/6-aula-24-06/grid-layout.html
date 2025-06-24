@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid Layout</title>
+    <style>
+        .container {
+            display: grid;
+            border: 1px solid;
+            grid-template-rows: repeat(2, 100px);
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+            background-color: #ccc; 
+        }
+
+        .item:nth-child(1) {
+            grid-column: 1/3;
+            grid-row: 1;
+        }
+
+        .item:nth-child(4) {
+            grid-column: 1/3;
+            grid-row: 2/4;
+        }
+
+        .item {
+            border: inherit;
+            font-size: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class = "item">1</div>
+        <div class = "item">2</div>
+        <div class = "item">3</div>
+        <div class = "item">4</div>
+        <div class = "item">5</div>
+        <div class = "item">6</div>
+    </div>
+</body>
+</html>
