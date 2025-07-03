@@ -26,9 +26,9 @@ function renderizarLista() {
     let exibicao = [...itens]
     const status = filtroStatus.value
 
-    if(status === 'pending') exibicao.filter(i => !i.purchased)
+    if(status === 'pending') exibicao = exibicao.filter(i => !i.purchased)
 
-    if(status === 'purchased') exibicao.filter(i => i.purchased)
+    if(status === 'purchased') exibicao = exibicao.filter(i => i.purchased)
 
     if(ordenar.value === 'alphabetical') {
         exibicao.sort((a, b) => a.text.localeCompare(b.text))
