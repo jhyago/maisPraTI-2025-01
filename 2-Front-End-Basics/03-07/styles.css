@@ -60,16 +60,38 @@ nav li +li {
         flex-direction: column;
         max-height: 0;
         overflow: hidden;
+        z-index: 10;
         transition: max-height 0.3s;
     }
+    
+    .container {
+        width: 100%;
+        position: relative;
+    }
 
-    .nav .open {
+    .nav.open {
         max-height: 200px;
+    }
+
+    .nav.open ul {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .nav.open li {
+        text-align: start;
+        margin: 0;
+        border-bottom: 1px solid #f1efef;
     }
 
     .nav-toggle {
         display: block;
+        padding: .5rem;
     }
+}
+
+li a:hover {
+    color: #000000;
 }
 
 .hero {
