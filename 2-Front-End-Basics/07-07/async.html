@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promise, Fetch, Async/Await</title>
+
+    <style>
+        body {
+            font-family: arial;
+            margin: 0;
+        }
+
+        button {}
+
+        pre {}
+    </style>
+</head>
+
+<body>
+    <h1>Assincronismo</h1>
+
+    <button id="btnPromise">Executar Promise</button>
+    <pre id="outPromise"></pre>
+
+    <button id="btnFetchThen">Fetch via .then()</button>
+    <pre id="outFetchThen"></pre>
+
+    <button id="btnFetchAsync">Fetch via async/await</button>
+    <pre id="outFetchAsync"></pre>
+
+    <script>
+        function simulatePromise(valor, tempMS) {
+            return new Promise((resolve, reject) => {
+                setTimeout(() => {
+                    if (valor) {
+                        resolve('Sucesso!' + valor)
+                    } else {
+                        reject('Erro: valor inválido')
+                    }
+                }, tempMS)
+
+                const outFetchThen = document.getElementById('outFetchThen')
+                outFetchThen.textContent = 'Outro Teste'
+            })
+        }
+
+        document.getElementById('btnPromise').addEventListener('click', () => {
+            const out = document.getElementById('outPromise')
+            out.textContent = 'Aguardando...'
+            simulatePromise('Olá, Mundo!', 3000)
+            .then(msg => {
+                out.textContent = msg
+            })
+            .catch(err => {
+                out.textContent = err
+            })
+
+            const btnFetchThen = document.getElementById('btnFetchThen')
+            btnFetchThen.textContent = 'Teste'
+        })
+
+
+        async function consultarCepAsync() {
+            const out = document.getElementById('outFetchAsync')
+
+            out.textContent = 'Buscando Cep...'
+
+            const url = `https://viacep.com.br/ws/92702510/json/`
+
+            try {
+                const resp = await fetch(url, { method: 'GET' })
+
+                const data = await resp.json()
+
+                out.textContent = JSON.stringify(data, null, 2)
+
+                const btnFetchThen = document.getElementById('btnFetchThen')
+                btnFetchThen.textContent = 'Teste'
+            } catch (err) {
+                out.textContent = err
+            }
+        }
+
+        document.getElementById('btnFetchAsync').addEventListener('click', buscarCepPromise)
+
+         function buscarCepPromise() {
+            dados =  new Promise((resolve, reject) => {
+                const url = `https://viacep.com.br/ws/92702510/json/`
+
+                const resp = fetch(url, { method: 'GET' })
+                .then(response => {
+                    return response.json()
+                })
+                .then(data => {
+                    resolve(data)
+                })
+            })  
+
+            const btnFetchThen = document.getElementById('btnFetchThen')
+                btnFetchThen.textContent = 'teste'
+        }
+    </script>
+</body>
+
+</html>
