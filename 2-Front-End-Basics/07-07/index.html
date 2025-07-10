@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Via CEP</title>
+
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 2rem;
+        }
+
+        label,
+        input,
+        button {
+            display: block;
+            margin: 0.5rem 0;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Consulta Endereço por CEP</h1>
+
+    <label for="cep">Digite o CEP (8 dígitos):</label>
+    <input type="text" id="cep" maxlength="9" placeholder="ex: 01001-000">
+    <button id="buscar">Buscar Endereço</button>
+
+    <div id="resultado"></div>
+
+    <script>
+        const inputCep = document.getElementById('cep')
+        const btnBuscar = document.getElementById('buscar')
+        const divResultado = document.getElementById('resultado')
+
+        async function consultarCep() {
+            const cep = inputCep.value
+
+            const url = `https://viacep.com.br/ws/${cep}/json/`
+
+            try {
+                const resp = await fetch(url, { method: 'GET' })
+
+                const data = await resp.json()
+
+                divResultado.innerHTML = `
+                <h2>Endereço Encontrado:</h2>
+                <ul>
+                    <li>CEP: ${data.cep}</li>  
+                    <li>Logradouro: ${data.logradouro}</li>  
+                    <li>Complemento: ${data.complemento}</li>
+                    <li>Bairro: ${data.bairro}</li>
+                    <li>Cidade: ${data.localidade}</li>
+                    <li>Estado: ${data.uf}</li>
+                </ul>`
+
+            } catch (err) {
+                divResultado.innerHTML = `<p class='erro'>Erro ao consultar o CEP ${cep}</p>`
+            }
+        }
+
+        btnBuscar.addEventListener('click', consultarCep)
+    </script>
+</body>
+
+</html>

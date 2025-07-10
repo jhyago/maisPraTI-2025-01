@@ -52,8 +52,7 @@ nav li +li {
 
 @media(max-width: 462px) {
     .nav {
-        position: absolute;
-        top: 100%;
+        position: none;
         left: 0;
         right: 0;
         background: #fff;
@@ -63,7 +62,7 @@ nav li +li {
         transition: max-height 0.3s;
     }
 
-    .nav .open {
+    .nav.open {
         max-height: 200px;
     }
 
