@@ -32,15 +32,16 @@ function renderizarLista() {
 
     if(ordenar.value === 'alphabetical') {
         exibicao.sort((a, b) => a.text.localeCompare(b.text))
-    } else if(ordenar.value === status) {
+    } else if(ordenar.value === 'status') {
         exibicao.sort((a, b) => a.purchased - b.purchased)
     }
+
 
     listaItens.innerHTML = ''
 
     exibicao.forEach((item, index) => {
         const li = document.createElement('li')
-        li.textContent = item
+        li.textContent = item.text
 
         const btnToggle = document.createElement('button')
         btnToggle.textContent = item.purchased ? 'Marcar Pendente' : 'Marcar Comprado'
@@ -64,14 +65,14 @@ function renderizarLista() {
 
     contadorTotal.textContent = `Total: ${itens.length}`
     contadorPendentes.textContent = `Pendentes: ${itens.filter(i => !i.purchased).length}`
-    contadorPendentes.textContent = `Comprados: ${itens.filter(i => i.purchased).length}`
+    contadorComprados.textContent = `Comprados: ${itens.filter(i => i.purchased).length}`
 }
 
 formAdicionar.addEventListener('submit', (evento) => {
     evento.preventDefault()
     const novoItem = inputItem.value.trim()
     if(novoItem === '') return; 
-    itens.push(novoItem)
+    itens.push({ text: novoItem, purchased: false })
 
     salvarDados()
     renderizarLista()
@@ -91,6 +92,14 @@ btnLimpar.addEventListener('click', () => {
         salvarDados()
         renderizarLista()
     }
+})
+
+ordenar.addEventListener('change', () => {
+    renderizarLista()
+})
+
+filtroStatus.addEventListener('change', () => {
+    renderizarLista()
 })
 
 
