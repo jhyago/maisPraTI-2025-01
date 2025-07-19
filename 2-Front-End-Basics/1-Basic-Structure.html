@@ -1,129 +1,91 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="keywords" content="Desenvolvimento Web, HTML, CSS e Javascript">
-    <meta name="Author" content="Dick Vigarista">
-    <meta name="description" content="Esse é um site de cunho educativo.">
-    <title>Aula 01</title>
-    <style>
-        a {
-            font-weight: bold;
-            color: brown;
-            border: 2px dashed;
+<!DOCTYPE html> <!-- Declara o documento como HTML5 -->
+<html lang="en"> <!-- Elemento raiz, atributo lang define o idioma como Inglês -->
+
+<head> <!-- Início do cabeçalho: metadados e estilos -->
+    <meta charset="UTF-8"> <!-- Define codificação de caracteres como UTF‑8 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Ajuste para responsividade em dispositivos móveis -->
+    <title>Dia dos Namorados</title> <!-- Título que aparece na aba do navegador -->
+    <style> 
+        img { /* Estilização para todas as imagens */
+            width: 100%;           /* Largura máxima disponível */
+            margin-bottom: 10px;   /* Espaço abaixo de 10px */
         }
 
-        p {
-            background-color: #c3c3c3;
-            color: blue;
+        #Daredevil { /* Estilo específico para a imagem com id="Daredevil" */
+            width: 150px;                   /* Largura fixa de 150px */
+            height: 150px;                  /* Altura fixa de 150px */
+            border-radius: 50%;             /* Torna a imagem redonda */
+            border: 2px solid #444;         /* Borda sólida escura de 2px */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+            object-fit: cover;              /* Corta a imagem para cobrir o container sem distorcer */
         }
 
-        table {
-            border: 1px solid;
+        table,
+        tr,
+        td { /* Estilo para tabela, linhas e células */
+            border: 1px solid; /* Borda sólida de 1px por padrão */
         }
+    </style> <!-- Fim do bloco de estilos -->
+</head> <!-- Fim do cabeçalho -->
 
-        th, td {
-            border: 1px solid;
-            background-color: bisque;
-        }
-    </style>
-</head>
-<body>
-    <header>
-        <nav>
-            <a href="home.html">Home</a>
-            <a href="contato.html">Contato</a>
-        </nav>
-        <h1>Aprendendo HTML na Prática</h1>
-        <h2>Aprendendo HTML na Prática</h2>
-        <h3>Aprendendo HTML na Prática</h3>
-    </header>  
+<body> <!-- Início do corpo: conteúdo visível na página -->
+    <p>
+        Visite o <a href="https://developer.mozilla.org/pt-BR">MDN Web Docs</a> para a documentação HTML
+        <!-- Parágrafo com link externo para MDN Web Docs -->
+    </p>
 
-    <hr>
+    <a href="#secao-ancorada">Link para a seção ancorada</a> <!-- Link que aponta a um id dentro da página -->
 
-    <section>
-        <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam quaerat neque id voluptatum unde accusantium laborum, quod debitis aspernatur. Explicabo ratione cumque nam eius? Facilis sunt harum minima modi officia.
-        </p>
-        <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam quaerat neque id voluptatum unde accusantium laborum, quod debitis aspernatur. Explicabo ratione cumque nam eius? Facilis sunt harum minima modi officia.
-        </p>
-        <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam quaerat neque id voluptatum unde accusantium laborum, quod debitis aspernatur. Explicabo ratione cumque nam eius? Facilis sunt harum minima modi officia.
-        </p>
-    </section>
+    <p id="secao-ancorada">Seção ancorada
+        <a href="1-Basic-Structure.html">Link para a primeira aula</a>
+        <!-- Parágrafo marcado com id, contendo link para outra página -->
+    </p>
 
-    <hr>
+    <p>
+        <a href="mailto:suporte@naovouresponder.com.br" target="_blank" rel="noopener noreferrer">
+            Envie um e-mail para o suporte
+        </a>
+        <!-- Link mailto que abre o cliente de e-mail em nova aba -->
+    </p>
 
-    <section>
-        <p>Veja a Sigla <abbr title="Sistema Único de Saúde">SUS</abbr></p>
-        <blockquote cite="https://developer.mozilla.org">
-            A Web é Construída sobre os padrões abertos e grande colaboração da comunidade.
-        </blockquote>
-        <p>5 de Novembro é uma data popularizada por <cite>Guy Fawkes</cite></p>
-        <p>Como disse Carlos Gonzada: <q>O Amor é uma Dor.</q></p>
-        <p>O Grêmio vai levar a <strong>Sul-Americana</strong> esse ano.</p>
-        <p>Geralt de Rívia é um grande <em>bruxo.</em></p>
-        <p>Killua é mais forte que o <u>Gon</u></p>
-        <p>A cidade de Porto Alegre tem dois times Grêmio e <s>Inter</s> São José</p>
-    </section>
+    <h3>Imagem de Exemplo</h3> <!-- Título de nível 3 para seção de imagens -->
+    <img src="assets/Batman.jpg" alt="" width="300"> <!-- Imagem com largura fixa de 300px -->
 
-    <hr>
+    <img src="assets/Arena.jpg" alt="Campeão do Mundo de 83" width="300">
+    <!-- Imagem com atributo alt descritivo e largura de 300px -->
 
-    <section>
-        <h2 style="color: blue">Catálogo de Produtos</h2>
-        <table>
-            <tr>
-                <th>Produto</th>
-                <th>Descrição</th>
-                <th>Preço</th>
-            </tr>
-            <tr>
-                <td>Smartphone</td>
-                <td>Modelo com tela AMOLED de 5"</td>
-                <td>R$ 100</td>
-            </tr>
-             <tr>
-                <td>Câmera DSLR</td>
-                <td>24MP com lente de 18-55mm</td>
-                <td>R$ 120</td>
-            </tr>
-            <tr>
-                <td>Playstation 5</td>
-                <td>Console que não tem jogo.</td>
-                <td>R$ 220</td>
-            </tr>
-            <tr>
-                <td colspan="3">Total: R$ 440</td>
-            </tr>
-        </table>
-    </section>
+    <!-- Um cabeçalho com menu interno, um desses links seja um . E os outros, tenham imagens em diferentes tamanhos.  -->
+    <!-- Comentário de instrução sobre um cabeçalho e imagens diversos -->
 
-    <hr>
+    <img src="assets/Daredevil.jpg" alt="" id="Daredevil">
+    <!-- Imagem com id para estilo circular, conforme definido no CSS -->
 
-    <section>
-        <h2>Registro de Usuário</h2>
-        <form>
-            <label>Nome Completo:</label>
-            <input type="text">
-            <br>
-            <br>
-            <label>E-mail:</label>
-            <input type="text">
-            <br>
-            <br>
-            <label>Senha:</label>
-            <input type="password">
-        </form>
-    </section>
+    <table> <!-- Início de uma tabela -->
+        <tr> <!-- Linha de cabeçalho -->
+            <th>Título</th> <!-- Célula de cabeçalho "Título" -->
+            <th>Vídeo</th>   <!-- Célula de cabeçalho "Vídeo" -->
+        </tr>
+        <tr> <!-- Segunda linha, conteúdo de dados -->
+            <td>Apresentação do Conteúdo</td> <!-- Célula com texto -->
+            <td>
+                <div>
+                    <iframe
+                        width="300"
+                        height="300"
+                        src="https://www.youtube.com/embed/klE5WuYgDcw"
+                        title="O Aluno Perfeito | 2.5 Horas de Episódios Antigos | Pica-Pau em Português"
+                        frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        referrerpolicy="strict-origin-when-cross-origin"
+                        allowfullscreen>
+                    </iframe>
+                    <!-- Incorpora vídeo do YouTube com dimensões fixas e permissões -->
+                </div>
+            </td>
+        </tr>
+    </table> <!-- Fim da tabela -->
 
-    <hr>
-
-    <footer>
-        <h2>Rodapé</h2>
-        &lt;Desenvolvendo para Web&gt;
-        <p>Desenvolvido por Jaques &copy; 2025</p>
-    </footer>
-</body>
-</html>
+    <!-- Criar uma tabela com 5x5 de imagens. -->
+    <!-- Comentário indicando próximo exercício ou tarefa -->
+</body> <!-- Fim do corpo -->
+</html> <!-- Fim do documento HTML -->
