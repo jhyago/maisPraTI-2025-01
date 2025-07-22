@@ -92,6 +92,7 @@ header {
     width: 100%;
     height: 100%;
     color: #ffffff;
+    border-radius: 6px;
     background-color: transparent;
     border: 1px solid rgba(255, 255, 255, 0.5);
     outline: none;
@@ -115,4 +116,178 @@ header {
     padding-left: 10px;
     border-left: 1px solid rgba(255, 255, 255, 0.5);
     cursor: pointer;
+}
+
+.swiper {
+    width: 100%;
+    height: 100vh;
+}
+
+.swiper .swiper-wrapper {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.swiper .swiper-wrapper .swiper-slide {
+    width: 100%;
+    height: 100%;
+}
+
+.swiper .swiper-wrapper .swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.swiper .swiper-wrapper .swiper-slide .banner {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    min-height: 100%;
+    padding: 30px 10px 0;
+    overflow: hidden;
+    background: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.banner .left .features {
+    max-width: 400px;
+    margin-bottom: 100px;
+}
+
+.banner .left .features .rating {
+    color: #ffffff;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.banner .left .features .rating .score {
+    padding: 15px;
+    font-size: 2rem;
+    font-weight: 400;
+    color: var(--primary);
+    background-color: #ffffff;
+}
+
+.banner .left .features .pricing {
+    color: #ffffff;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.banner .left .features .pricing ion-icon {
+    padding: 15px;
+    font-size: 3rem;
+    font-weight: 400;
+    color: #ffffff;
+    background-color: rgba(255, 0, 0, 0.6);
+    transition: 0.3s;
+}
+
+.banner .left .features .pricing ion-icon:hover {
+    background-color: rgba(255, 0, 0, 0.9);
+}
+
+.banner .left .features .content {
+    margin-left: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: start;
+}
+
+.banner .left .features .content h4 {
+    color: #ffffff;
+    font-size: 1.5rem;
+    font-weight: 400;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.banner .left .features .content span {
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    font-weight: 400;
+}
+
+.banner .left .features .content .subtitle {
+    color: var(--primary);
+}
+
+.banner h1 {
+    color: #ffffff;
+    font-size: 5em;
+    letter-spacing: 5px;
+    line-height: 0.9;
+    font-family: "Bauhaus 93";
+}
+
+.banner img {
+    max-width: 650px;
+    max-height: 650px;
+    width: 50%;
+    height: 50%;
+}
+
+.swiper .swiper-wrapper .swiper-slide .banner .right {
+    position: relative;
+    height: 100vh;
+    max-width: 450px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    z-index: 100;
+}
+
+.banner .right .description {
+    padding: 30px 60px 0 0;
+    color: #ffffff;
+}
+
+.banner .right .description li {
+    list-style: none;
+}
+
+.banner .right .description h4 {
+    display: inline-block;
+    font-size: 1.3rem;
+    display: flex;
+    align-items: center;
+}
+
+.banner .right .trailer h2 {
+    color: #ffffff;
+}
+
+.banner .right iframe {
+    max-width: 450px;
+    max-height: 255px;
+} 
+
+.swiper .swiper-button-prev {
+    position: absolute;
+    left: 86%;
+    top: 45%;
+    width: 54px;
+    height: 54px;
+    border: 1px solid red;
+}
+
+.swiper .swiper-button-next {
+    position: absolute;
+    right: 6%;
+    top: 45%;
+    width: 54px;
+    height: 54px;
+    border: 1px solid red;
 }
