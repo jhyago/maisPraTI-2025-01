@@ -130,7 +130,7 @@ header {
     height: 100%;
 }
 
-.swiper .swiper-wrapper .swiper-slide {
+.swiper .swiper-wrapper .left {
     width: 100%;
     height: 100%;
 }
@@ -168,6 +168,7 @@ header {
     justify-content: flex-start;
     align-items: center;
     margin-bottom: 25px;
+    right:50%;
 }
 
 .banner .left .features .rating .score {
@@ -276,18 +277,31 @@ header {
 
 .swiper .swiper-button-prev {
     position: absolute;
-    left: 86%;
+    left: 80%;
     top: 45%;
     width: 54px;
     height: 54px;
-    border: 1px solid red;
+    border: 1px solid white;
+    border-radius: 100%;
+    background-color: transparent;
+    color: white;
 }
 
 .swiper .swiper-button-next {
     position: absolute;
-    right: 6%;
+    right: 10%;
     top: 45%;
     width: 54px;
     height: 54px;
-    border: 1px solid red;
+    background-color: transparent;
+    border-radius: 100%;
+    border: 1px solid white;
+    color: white;
+}
+
+.swiper .swiper-pagination {
+    position: absolute;
+    left: 25%;
+    top: 45%;
+    --swiper-pagination-color: aliceblue ;
 }
