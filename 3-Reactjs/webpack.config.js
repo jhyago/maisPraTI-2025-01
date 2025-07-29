@@ -1,35 +1,39 @@
-const HtmlWebpackPlugin = require("html-webpack-plugin")
-const path = require("path")
+import HtmlWebpackPlugin from "html-webpack-plugin";
+import path from "path";
+import { fileURLToPath } from "url";
 
-module.exports = {
-    entry: "./src/index.js",
-    mode: "development",
-    output: {
-        filename: "bundle.js",
-        path: path.resolve(__dirname, "public"),
-        clean: true
-    },
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
-    module: {
-        rules: [
-            {
-                test: /\.jsx?$/,
-                exclude: /node_modules/,
-                use: "babel-loader"
-            }
-        ]
-    },
-
-    plugins: [
-        new HtmlWebpackPlugin ({
-            template: path.resolve("./public.index.html"),
-        })
-    ],
-
-    devServer: {
-        port: 3000,
-        static: {
-            directory: path.join(__dirname, "public")
-        }
-    },
-}
+export default {
+  entry: "./src/index.js",
+  mode: "development",
+  output: {
+    filename: "bundle.js",
+    path: path.resolve(__dirname, "public"),
+    clean: true
+  },
+  module: {
+    rules: [
+      {
+        test: /\.jsx?$/,
+        exclude: /node_modules/,
+        use: "babel-loader"
+      }
+    ]
+  },
+  plugins: [
+    new HtmlWebpackPlugin({
+      template: path.resolve(__dirname, "public", "index.html")
+    })
+  ],
+  resolve: {
+    extensions: [".js", ".jsx"]
+  },
+  devServer: {
+    port: 3001,
+    static: {
+      directory: path.resolve(__dirname, "public")
+    }
+  }
+};
