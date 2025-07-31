@@ -27,13 +27,15 @@ const content = [
       "React é muito popular",
       "Facilita a o trabalho de desenvolvedor",
       "React é declarativo",
-      "O Grêmio é tri campeão da libertadores"
+      "O Grêmio é tetra campeão da libertadores"
     ]
   }
 ]
 
 function App() {
   const [activeContentIndex, setActiveContentIndex] = useState(0)
+
+  
 
 
   return (
