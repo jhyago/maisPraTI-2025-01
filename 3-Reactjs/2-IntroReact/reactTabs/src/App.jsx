@@ -35,9 +35,6 @@ const content = [
 function App() {
   const [activeContentIndex, setActiveContentIndex] = useState(0)
 
-  
-
-
   return (
     <>
       <div className='container'>
