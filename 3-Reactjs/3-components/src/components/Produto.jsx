@@ -3,25 +3,23 @@
 function Produto(props) {
     return (
         <div>
-            <h2>{props.nome}</h2>
-            <h2>{props.preco}</h2>
-            <h2>{props.descricao}</h2>
+            <h1>{props.name}</h1>
+            <p>{props.price}</p>    
+            <p>{props.description}</p>    
         </div>
     )
 }
 
-function Aplicativo() {
-    const produto = {
-        nome: "Camiseta",
-        preco: 79.90,
-        descricao: "Camiseta muita maneira do Kansas"
+function App() {
+    const product = {
+        name: "Avell XLR8",
+        price: "+ de 7000",
+        description: "30 minutos e acabou o pagode"
     }
 
-    return (
-        <div>
-            <Produto nome={produto.nome} preco={produto.preco} descricao={produto.descricao}/>
-        </div>
+    return(
+        <Produto name={product.name} price={product.price} description={product.description} />
     )
 }
 
-export default Aplicativo
+export default App
