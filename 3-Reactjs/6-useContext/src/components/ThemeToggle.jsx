@@ -1,9 +1,11 @@
-function ThemeToggle() {
-    const { theme, toggleTheme } = useTheme()
+import { useTheme } from "../context/ThemeContext"
 
-    return(
-        <button onClick={toggleTheme}>
-            Alternar para {theme === "light" ? "dark" : "light"}
-        </button>
-    )
+export default function ThemeToggle() {
+  const { toggleTheme } = useTheme()
+
+  return (
+    <button onClick={toggleTheme}>
+      Alternar tema
+    </button>
+  )
 }

@@ -6,10 +6,10 @@ export default function Post() {
     return (
         <section>
             <h1>Post #{id}</h1>
-            <p>Aqui estariam os dados do post de id #{id}</p>
+            <p>Aqui você está no Post de ID {id}</p>
 
-            <p>
-                Ver outro post: <Link to="/posts/10">posts/10</Link>
+            <p style={{ marginTop: 12 }}>
+                <Link to="posts/100">/posts/100</Link>
             </p>
         </section>
     )
