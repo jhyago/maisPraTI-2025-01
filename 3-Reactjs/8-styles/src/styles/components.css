@@ -1,0 +1,23 @@
+.btn {
+    padding: 12px 16px;
+    background: rgb(7, 147, 7);
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.btn:hover {
+    filter: brightness(.90);
+}
+
+.card {
+    border: 1px solid #e5e5e5;
+    border-radius: 4px;
+    padding: 16px;
+}
+
+.card__title {
+    font-weight: 800;
+    margin: 0;
+}
