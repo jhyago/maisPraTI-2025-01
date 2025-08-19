@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conectando com a API de Filmes e Series</title>
+</head>
+
+<style>
+    * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+    }
+
+    .container {
+        display: grid;
+        grid-template-columns: repeat(4, 500px);
+        padding: 2em 4em;
+        gap: 4em;
+    }
+
+    h1 {
+        padding: 1em 4em ;
+    }
+</style>
+
+<body>
+    <h1>Bem-vindo! Meus filmes favoritos.</h1>
+
+    <div class="container"></div>
+
+    <script>
+
+        const url = "https://api.themoviedb.org/3/movie/popular?language=en-US&page=1"
+        const container = document.querySelector(".container")
+        const options = {
+            method: 'GET',
+            headers: {
+                accept: 'aplication/json',
+                Authorization: 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI3YzFiMjE4YTAzMDVmNjY3MDM2NTUwMmNkMmQxZGY1OSIsIm5iZiI6MTc1MjAxOTUwNC43MjUsInN1YiI6IjY4NmRiMjMwNWNmYWI0NDgxOWVkNjI4OCIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.jIrt7Z6rIuVLTiZLvRVqM3as4ltFyqeX_KzYmn6PJLs'
+            }
+        };
+
+        fetch(url, options)
+            .then(res => res.json())
+            .then(data => {
+                const arr = data.results
+
+
+                const arrMovies = arr.map((movie) => {
+                    const urlImagem = `https://image.tmdb.org/t/p/w500${movie.backdrop_path}`;
+
+                    return `
+                <div>
+                    <h2>${movie.title}</h2>
+                    <img src="${urlImagem}" alt="movie ${movie.title}">
+                    <p>${movie.overview}</p>
+                </div>
+                    `
+                })
+
+                container.innerHTML = arrMovies
+            })
+            .catch(err => console.log("Error", err))
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>
