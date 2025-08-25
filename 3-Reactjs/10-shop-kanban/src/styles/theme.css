@@ -1,0 +1,23 @@
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    background-color: var(--color-bg);
+}
+
+:root { /* Variáveis do tema claro (padrão) */
+    --color-bg: #f7f7f8;
+    --color-fg: #111114;
+    --color-surface: #ffffff;
+    --color-surface-2: #f1f1f3;
+    --color-surface-3: #e7e7ea;
+    --color-border: #dcdce1;
+    --color-border-strong: #bdbdc7;
+}
+
+[data-theme='dark'] {
+
+}
