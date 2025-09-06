@@ -35,7 +35,7 @@ public class Livro {
         this.anoPublicacao = anoPublicacao;
     }
 
-    public boolean getDisponibilidade() {
+    public boolean isDisponibilidade() {
         return disponibilidade;
     }
 
@@ -46,8 +46,8 @@ public class Livro {
     public void exibirInfoLivro() {
         System.out.println("Titulo: " + getTitulo());
         System.out.println("Autor: " + getAutor());
-        System.out.println("Ano de publicação: " + getAnoPublicacao());
-        System.out.println("Disponibilidade: " + (disponibilidade ? "Disponível" : "Emprestado"));
-        System.out.println("------------------------------");
+        System.out.println("Ano de Publicação: " + getAnoPublicacao());
+        System.out.println("Disponibilidade: " + ((disponibilidade) ? "Disponível" : "Emprestado"));
+        System.out.println("--------------------------------");
     }
 }

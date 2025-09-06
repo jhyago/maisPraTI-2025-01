@@ -1,15 +1,16 @@
 public class Pessoa {
     private String nome;
-    private int idade;
-    protected String sexo;
+    int idade;
+    String sexo;
 
-    public Pessoa(String nome, int idade) {
+    public Pessoa(String nome, int idade, String sexo) {
         this.nome = nome;
         this.idade = idade;
+        this.sexo = sexo;
     }
 
     public void apresentar() {
-        System.out.println("Olá, meu nome é " + nome + " e eu tenho " + idade + " anos de idade");
+        System.out.println("Meu nome é " + nome + " tenho " + idade + " anos e sou do sexo " + sexo);
     }
 
     public String getNome() {
@@ -23,14 +24,14 @@ public class Pessoa {
 
 class Main {
     public static void main(String[] args) {
-        Pessoa pessoa1 = new Pessoa("Pedro", 20);
-        pessoa1.apresentar();
+        Pessoa p1 = new Pessoa("Pedro", 20, "masculino");
+        p1.apresentar();
+        System.out.println(p1.getNome());
 
-        System.out.println(pessoa1.getNome());
-        pessoa1.setNome("Gilmar");
-        pessoa1.apresentar();
+        p1.setNome("Patinhas");
+        p1.apresentar();
 
-        Pessoa pessoa2 = new Pessoa("Maria", 30);
-        pessoa2.apresentar();
+        Pessoa p2 = new Pessoa("Maísa", 21, "feminino");
+        p2.apresentar();
     }
 }

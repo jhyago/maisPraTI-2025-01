@@ -5,7 +5,7 @@ public class Biblioteca {
     private List<Livro> livros;
 
     public Biblioteca() {
-        this.livros = new ArrayList<Livro>();
+        this.livros = new ArrayList<>();
     }
 
     public void adicionarLivro(Livro livro) {
@@ -14,7 +14,7 @@ public class Biblioteca {
 
     public void listarLivros() {
         if(this.livros.isEmpty()) {
-            System.out.println("Não há livros na biblioteca");
+            System.out.println("Não há livros na biblioteca.");
         } else {
             for (Livro livro : this.livros) {
                 livro.exibirInfoLivro();
@@ -24,11 +24,12 @@ public class Biblioteca {
 
     public void alterarDisponibilidade(String titulo, boolean disponibilidade) {
         for(Livro livro : this.livros) {
-            if (livro.getTitulo().equals(titulo)) {
+            if(livro.getTitulo().equals(titulo)) {
                 livro.setDisponibilidade(disponibilidade);
-                System.out.println("Disponibilidade do livro: " + livro.getTitulo() + "Alterada para " + (disponibilidade ? "Disponível" : "Emprestado"));
+                System.out.println("Disponibilidade do livro: " + livro.getTitulo() + "foi alterada para " + ((disponibilidade) ? "disponível" : "emprestado"));
             }
         }
+
         System.out.println("Livro não encontrado!");
     }
 }

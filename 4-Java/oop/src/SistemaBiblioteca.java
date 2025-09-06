@@ -1,32 +1,30 @@
 public class SistemaBiblioteca {
     public static void main(String[] args) {
-        Biblioteca Vanguarda = new Biblioteca();
+        Biblioteca biblioteca = new Biblioteca();
 
-        Livro HarryPotter = new Livro("Harry Potter: E o Prisioneiro de Azkaban", "J. k. Rolling", 2003);
-        Livro SenhorDosAneis = new Livro("A Sociedade do Anel", "J. R. R. Tolkien", 1954);
-        Livro Narnia = new Livro("Nárnia", "C. S. Lewis", 1954);
-        Livro Conde = new Livro("Conde de Monte Cristo", "Alexandre Dumas", 1846);
-        Livro Despossuidos = new Livro("Os Despossuidos", "Úrsula Le Guin", 1974);
-        Livro Memorias = new Livro("Memórias Póstumas de Brás Cubas", "Machado de Assis", 1903);
-        Livro Bichos = new Livro("Revolução dos Bichos", "George Orwell", 1980);
-        Livro Dracule = new Livro(" Drácula", "Bran Stoker", 1897);
-        Livro CodigoDaVinci = new Livro("Código da Vinci", "Dan Brown", 2003);
-        Livro Suor = new Livro("Suor", "Jorge Amado", 1950);
+        Livro livro1 = new Livro("O Pequeno Príncipe", "Antoine de Saint-Exupéry", 1943);
+        Livro livro2 = new Livro("Dom Casmurro", "Machado de Assis", 1899);
+        Livro livro3 = new Livro("A Revolução dos Bichos", "George Orwell", 1945);
+        Livro livro4 = new Livro("Crime e Castigo", "Fiódor Dostoiévski", 1866);
+        Livro livro5 = new Livro("A República", "Platão", 380);
+        Livro livro6 = new Livro("Os Miseráveis", "Victor Hugo", 1862);
+        Livro livro7 = new Livro("Dom Quixote", "Miguel de Cervantes", 1605);
+        Livro livro8 = new Livro("Vidas Secas", "Graciliano Ramos", 1938);
+        Livro livro9 = new Livro("O Hobbit", "J. R. R. Tolkien", 1937);
+        Livro livro10 = new Livro("Em Busca de Sentido", "Viktor Frankl", 1946);
 
-        Vanguarda.adicionarLivro(HarryPotter);
-        Vanguarda.adicionarLivro(SenhorDosAneis);
-        Vanguarda.adicionarLivro(Narnia);
-        Vanguarda.adicionarLivro(Conde);
-        Vanguarda.adicionarLivro(Despossuidos);
-        Vanguarda.adicionarLivro(Memorias);
-        Vanguarda.adicionarLivro(Bichos);
-        Vanguarda.adicionarLivro(Dracule);
-        Vanguarda.adicionarLivro(CodigoDaVinci);
-        Vanguarda.adicionarLivro(Suor);
+        biblioteca.adicionarLivro(livro1);
+        biblioteca.adicionarLivro(livro2);
+        biblioteca.adicionarLivro(livro3);
+        biblioteca.adicionarLivro(livro4);
+        biblioteca.adicionarLivro(livro5);
+        biblioteca.adicionarLivro(livro6);
+        biblioteca.adicionarLivro(livro7);
+        biblioteca.adicionarLivro(livro8);
+        biblioteca.adicionarLivro(livro9);
+        biblioteca.adicionarLivro(livro10);
 
-//        Vanguarda.listarLivros();
-
-        Vanguarda.alterarDisponibilidade("Código da Vinci", false);
-        Vanguarda.listarLivros();
+        biblioteca.alterarDisponibilidade("O Hobbit", false);
+        biblioteca.listarLivros();
     }
 }
