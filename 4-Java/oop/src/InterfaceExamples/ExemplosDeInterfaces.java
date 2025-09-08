@@ -75,6 +75,7 @@ public class ExemplosDeInterfaces {
         tradicional.metodo2("Exemplo de mensagem.");
 
         // 3. Implementação de uma interface com métodos padrão
+
         InterfaceComDefault comDefault = new InterfaceComDefault() {
             @Override
             public void metodoObrigatorio() {
