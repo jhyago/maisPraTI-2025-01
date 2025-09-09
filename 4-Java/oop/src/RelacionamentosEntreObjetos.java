@@ -124,7 +124,7 @@ public class RelacionamentosEntreObjetos {
 //
 // O sistema deve ter uma classe abstrata chamada Veiculo, com atributos básicos como marca, modelo e ano, e um método para exibir essas informações. Além disso, o método tipoDeVeiculo() deverá ser implementado nas subclasses Carro e Moto, que devem herdar de Veiculo. Cada tipo de veículo deve exibir seu tipo específico.
 //
-// Crie uma classe Proprietario, que possui informações como nome e endereço, e que pode ter múltiplos veículos associados a ele. A relação entre proprietário e veículos deve ser uma associação.
+// Crie uma classe Proprietario, que possui informações como nome e endereço, e que pode ter múltiplos veículos associados a ele. A relação entre proprietário e veículos deve ser uma dependência.
 //
 // Implemente uma classe Servico, que tem informações sobre a descrição e o preço dos serviços realizados, e uma classe Oficina, que é responsável por adicionar e listar serviços realizados.
 //
