@@ -72,5 +72,3 @@ public class ExemploCollections {
 //Exiba o total de funcionários com salário superior a R$ 4.000,00.
 
 //Crie uma lista com os nomes dos funcionários e a exiba.
-
-//Utilize os recursos de Streams para realizar as operações de forma concisa e eficiente.
