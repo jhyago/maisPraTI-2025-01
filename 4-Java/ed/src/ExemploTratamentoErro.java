@@ -49,5 +49,5 @@ public class ExemploTratamentoErro {
 //    Além disso, o sistema deve permitir o uso de Streams para filtrar e exibir tarefas que possuem dependências, calcular a duração total de uma tarefa (somando a duração da tarefa e de todas as suas dependências) e listar todas as tarefas cuja duração seja superior a um valor específico.
 
 //    Implemente o tratamento de exceções para garantir que, ao tentar calcular a duração total de uma tarefa ou adicionar uma tarefa com dependências inválidas, erros sejam capturados e mensagens apropriadas sejam exibidas.
-//
+
 }
