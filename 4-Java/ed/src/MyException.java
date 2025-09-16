@@ -1,5 +1,5 @@
 public class MyException extends Exception {
-    public MyException(String msg) {
-        super(msg);
+    MyException(String mensagem) {
+        super(mensagem);
     }
 }
