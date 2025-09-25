@@ -1,4 +1,4 @@
-package com.t1.springbasics.conceitosBasicos;   // Mesmo pacote dos exemplos de IoC/DI (Carrinho, Motor).
+package com.t1.springbasics.iocbasics;   // Mesmo pacote dos exemplos de IoC/DI (Carrinho, Motor).
 
 import org.springframework.stereotype.Service;
 

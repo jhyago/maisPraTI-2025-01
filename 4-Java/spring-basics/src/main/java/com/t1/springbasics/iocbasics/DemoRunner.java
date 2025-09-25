@@ -1,4 +1,4 @@
-package com.t1.springbasics.conceitosBasicos;
+package com.t1.springbasics.iocbasics;
 
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
