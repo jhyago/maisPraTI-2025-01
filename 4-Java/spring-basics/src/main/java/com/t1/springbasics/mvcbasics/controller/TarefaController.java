@@ -27,4 +27,13 @@ public class TarefaController {
         Tarefa criada = service.criar(novaTarefa.getTitulo());
         return ResponseEntity.created(URI.create("/api/tarefas/" + criada.getId())).body(criada);
     }
+
+    @PutMapping
+    public ResponseEntity<Tarefa> marcarConcluida(@RequestParam Long id) {
+        Tarefa t = service.marcarConcluida(id).orElse(null);
+        if(t != null) {
+            return ResponseEntity.ok(t);
+        }
+        return ResponseEntity.notFound().build();
+    }
 }
