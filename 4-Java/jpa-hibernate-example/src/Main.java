@@ -17,8 +17,6 @@ public class Main {
             cafe1.setDescricao("Pizza de calabresa");
             cafe1.setPreco_unitario(10.0);
 
-            session.save(cafe1);
-
             session.beginTransaction();
 
             session.save(cafe1);

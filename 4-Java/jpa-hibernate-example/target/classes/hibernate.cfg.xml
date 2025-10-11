@@ -5,8 +5,8 @@
         <!-- Driver e URL de Conexão com o PostgreSQL -->
         <property name="hibernate.connection.driver_class">org.postgresql.Driver</property>
         <property name="hibernate.connection.url">jdbc:postgresql://localhost:5432/cafeteria</property>
-        <property name="hibernate.connection.username">seu_usuario</property>
-        <property name="hibernate.connection.password">sua_senha</property>
+        <property name="hibernate.connection.username">postgres</property>
+        <property name="hibernate.connection.password">ROOT</property>
 
         <!-- Dialeto do PostgreSQL -->
         <property name="hibernate.dialect">org.hibernate.dialect.PostgreSQLDialect</property>
