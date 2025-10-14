@@ -15,7 +15,9 @@ public class JwtService {
     private final Key key;
     private final Long expirationMillis;
 
-    public JwtService(@Value("${SECURITY_JWT_SECRET}") String secret, @Value("${SECURITY_JWT_EXPIRATION_MILLIS}") Long expirationMillis ) {
+    public JwtService(
+            @Value("${security.jwt.secret}") String secret,
+            @Value("${security.jwt.expiraton-ms}") Long expirationMillis ) {
         if(secret == null || secret.length() < 32) {
             throw new IllegalArgumentException("JWT Secret em que ter pelo menos 32 caracteres");
         }
