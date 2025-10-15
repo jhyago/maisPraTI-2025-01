@@ -1,4 +1,4 @@
-// Exemplo 1: Fatorial de um número (n!)
+b// Exemplo 1: Fatorial de um número (n!)
 // Definição: 0! = 1; para n > 0, n! = n * (n - 1)!
 // A recursão reduz o problema até atingir o caso base (n <= 1).
 function fatorial(n) {

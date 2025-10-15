@@ -32,20 +32,20 @@ document.addEventListener('DOMContentLoaded', function () {
   const gameInput = document.getElementById('gameInput');
   const searchIcon = document.getElementById('searchIcon');
 
- 
+
   gameInput.addEventListener('keypress', function (e) {
     if (e.key === 'Enter') {
       const searchGame = gameInput.value.trim().toUpperCase();
-      
+
       switch (searchGame) {
         case 'MARIO':
-          swiper.slideTo(0); 
+          swiper.slideTo(0);
           break;
         case 'POKEMON':
-          swiper.slideTo(1); 
+          swiper.slideTo(1);
           break;
         case 'ZELDA':
-          swiper.slideTo(2); 
+          swiper.slideTo(2);
           break;
         default:
           alert('Jogo não encontrado.');
@@ -56,19 +56,19 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   });
 
-  
+
     searchIcon.addEventListener('click', function () {
     const searchGame = gameInput.value.trim().toUpperCase();
 
     switch (searchGame) {
       case 'MARIO':
-        swiper.slideTo(0); 
+        swiper.slideTo(0);
         break;
       case 'POKEMON':
-        swiper.slideTo(1); 
+        swiper.slideTo(1);
         break;
       case 'ZELDA':
-        swiper.slideTo(2); 
+        swiper.slideTo(2);
         break;
       default:
         alert('Jogo não encontrado.');
@@ -85,28 +85,28 @@ document.addEventListener('DOMContentLoaded', function () {
   const closeEmailModalBtn = emailModal.querySelector('.close');
   const emailForm = document.getElementById('emailForm');
 
-  
+
   openEmailModalBtn.addEventListener('click', function () {
     emailModal.style.display = 'block';
   });
 
-  
+
   closeEmailModalBtn.addEventListener('click', function () {
     emailModal.style.display = 'none';
   });
 
-  
+
   window.addEventListener('click', function (event) {
     if (event.target === emailModal) {
       emailModal.style.display = 'none';
     }
   });
 
-  
+
   emailForm.addEventListener('submit', function (event) {
-    event.preventDefault(); 
+    event.preventDefault();
     alert('Email enviado com sucesso!');
-    emailModal.style.display = 'none'; 
-    emailForm.reset(); 
+    emailModal.style.display = 'none';
+    emailForm.reset();
   });
 });
