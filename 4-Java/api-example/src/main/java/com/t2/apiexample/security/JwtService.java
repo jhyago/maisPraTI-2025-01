@@ -16,13 +16,14 @@ public class JwtService {
     private final Long expirationMillis;
 
     public JwtService(
-            @Value("${security.jwt.secret}") String secret,
-            @Value("${security.jwt.expiraton-ms}") Long expirationMillis ) {
-        if(secret == null || secret.length() < 32) {
+            @Value("${security.jwt.secret:12345678901234567890123456789012}") String secret,
+            @Value("${security.jwt.expiration:86400000}") Long expirationMillis
+    ) {
+        if (secret == null || secret.trim().length() < 32) {
             throw new IllegalArgumentException("JWT Secret em que ter pelo menos 32 caracteres");
         }
 
-        this.key = Keys.hmacShaKeyFor(secret.getBytes());
+        this.key = Keys.hmacShaKeyFor(secret.trim().getBytes());
         this.expirationMillis = expirationMillis;
     }
 

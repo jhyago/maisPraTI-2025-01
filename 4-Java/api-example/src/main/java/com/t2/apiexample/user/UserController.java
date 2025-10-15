@@ -18,7 +18,6 @@ public class UserController {
 
     @GetMapping("/me")
     public Map<String, Object> me(Principal principal) {
-        System.out.println(principal.getName());
         var user = userRepository.findByUsername(principal.getName()).orElseThrow();
         return Map.of(
                 "id", user.getId(),
