@@ -1,0 +1,35 @@
+services:
+  server:
+      build:
+          context: .
+      ports:
+          - 8080:8080
+      env_file:
+      - .env
+      depends_on:
+          db:
+              condition: service_healthy
+      volumes:
+          - .:/build
+      environment:
+          - SPRING_DATASOURCE_URL=jdbc:postgresql://db:5432/api-example
+          - SPRING_DATASOURCE_USERNAME=${POSTGRES_USERNAME}
+          - SPRING_DATASOURCE_PASSWORD=${POSTGRES_PASSWORD}
+  db:
+      image: postgres
+      restart: always
+      volumes:
+          - db-data:/var/lib/postgresql/data
+      environment:
+          - POSTGRES_DB=api-example
+          - POSTGRES_USER=${POSTGRES_USERNAME}
+          - POSTGRES_PASSWORD=${POSTGRES_PASSWORD}
+      ports:
+          - 5432:5432
+      healthcheck:
+          test: ['CMD', 'pg_isready', '-U', 'postgres']
+          interval: 10s
+          timeout: 5s
+          retries: 5
+volumes:
+    db-data:
