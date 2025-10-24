@@ -45,6 +45,13 @@ export function AuthProvider({ children }) {
         setToken(t)
         const me = await getMe(t)
         setUser(me)
+        
+    }
+
+    const logout = () => {
+        setToken(null)  
+        setUser(null)   
+        localStorage.removeItem(TOKEN_KEY)  
     }
 
     const value = useMemo(() => ({
@@ -56,7 +63,10 @@ export function AuthProvider({ children }) {
         isAuthenticated: Boolean(user),
         register,
         login,
+        logout,
     }), [user, token, loading])
+
+
 
     return <AuthContext.Provider value={value}>{children}</AuthContext.Provider>
 }

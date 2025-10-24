@@ -1,0 +1,81 @@
+/* Estilos para a página de registro */
+.register-page {
+    background: linear-gradient(135deg, #f7f3e8, #e2d6b9); /* Fundo suave e amarelado, lembrando páginas de livros antigos */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    font-family: 'Georgia', serif; /* Fonte que remete a livros */
+    color: #3e3b31; /* Cor escura, para parecer com tinta em papel */
+}
+
+.register-container {
+    background-color: #fff9f3; /* Fundo claro com leve toque amarelado */
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave para dar profundidade */
+    width: 400px;
+    max-width: 90%;
+}
+
+h1 {
+    text-align: center;
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: #4e4c41;
+}
+
+.register-form .form-group {
+    margin-bottom: 15px;
+}
+
+.register-form label {
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 5px;
+    display: block;
+}
+
+.register-form .form-input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #f8f4e3;
+    font-size: 16px;
+    color: #3e3b31;
+    box-sizing: border-box;
+    transition: border 0.3s;
+}
+
+.register-form .form-input:focus {
+    border-color: #b59e68; /* Cor dourada suave, como a capa de um livro clássico */
+    outline: none;
+}
+
+.submit-btn {
+    width: 100%;
+    padding: 12px;
+    background-color: #8e6e3b; /* Cor inspirada em couro ou madeira */
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.submit-btn:hover {
+    background-color: #70543c; /* Um tom mais escuro de marrom */
+}
+
+.register-form {
+    margin-top: 20px;
+}
+
+@media (max-width: 600px) {
+    .register-container {
+        width: 90%;
+    }
+}
