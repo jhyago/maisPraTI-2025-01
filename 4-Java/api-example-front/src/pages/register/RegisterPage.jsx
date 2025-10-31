@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { useAuth } from '../../app/state/auth.jsx'
+import './RegisterPage.css'
 
 export default function RegisterPage() {
     const { register } = useAuth()
@@ -20,27 +21,44 @@ export default function RegisterPage() {
     }
 
     return (
-        <div>
-            <h1>Registrar</h1>
-            <form onSubmit={onSubmit}>
-                <div>
-                    <label>Nome:</label>
-                    <input name='name' value={form.name} onChange={onChange} />
-                </div>
+        <div className="register-page">
+            <div className="register-container">
+                <h1>Registrar</h1>
+                <form onSubmit={onSubmit} className="register-form">
+                    <div className="form-group">
+                        <label>Nome:</label>
+                        <input 
+                            name='name' 
+                            value={form.name} 
+                            onChange={onChange} 
+                            className="form-input"
+                        />
+                    </div>
 
-                 <div>
-                    <label>username:</label>
-                    <input name='name' value={form.username} onChange={onChange} />
-                </div>
+                    <div className="form-group">
+                        <label>Username:</label>
+                        <input 
+                            name='username' 
+                            value={form.username} 
+                            onChange={onChange} 
+                            className="form-input"
+                        />
+                    </div>
 
-                 <div>
-                    <label>Senha:</label>
-                    <input type='password' name='name' value={form.password} onChange={onChange} />
+                    <div className="form-group">
+                        <label>Senha:</label>
+                        <input 
+                            type='password' 
+                            name='password' 
+                            value={form.password} 
+                            onChange={onChange} 
+                            className="form-input"
+                        />
+                    </div>
 
-                    <button>Criar Conta</button>
-                </div>
-            </form>
+                    <button className="submit-btn">Criar Conta</button>
+                </form>
+            </div>
         </div>
     )
-
 }
