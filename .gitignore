@@ -31,3 +31,4 @@ bin/
 
 ### Mac OS ###
 .DS_Store
+.venv
